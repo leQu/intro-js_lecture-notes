@@ -34,3 +34,45 @@ const orderObjet = whatEver(
 );
 
 console.log(orderObjet);
+
+const color = "blue";
+
+const age = 25;
+
+if (age > 20) {
+  console.log("Age is greater than 20");
+} else if (age === 20) {
+  console.log("Age is exactly 20");
+} else {
+  console.log("Age is less than 20");
+}
+
+switch (age) {
+  case 30:
+    console.log("Age is 30");
+    break;
+  case 25:
+    console.log("Age is 25");
+    break;
+  default:
+    console.log("Age is something else");
+    break;
+}
+
+const ages = {
+  30: "Age is 30",
+  25: "Age is 25",
+  35: "Age is 35",
+};
+
+const ageMessage = ages[age] || "Age is something else";
+
+switch (color) {
+  case "red":
+    console.log("Color is red");
+    break;
+  case "blue":
+    console.log("Color is blue");
+    break;
+  case "green":
+}

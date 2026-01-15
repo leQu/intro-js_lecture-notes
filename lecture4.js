@@ -79,8 +79,8 @@ const student = {
   isActive: true,
 };
 
-const allKeys = Object.keys(student);
-const allValues = Object.values(student);
+const allKeys = Object.keys(student); // ['firstName', 'lastName', 'age', 'isActive']
+const allValues = Object.values(student); // ['Alex', 'Lantz', 29, true]
 
 function showPopPushShiftUnShiftFunctions(myHobbies) {
   myHobbies.push("traveling"); // Lägger till i slutet
@@ -160,3 +160,30 @@ const experimentalReduceFunction = stockData.reduce((total, current) => {
 }, {});
 
 console.log(experimentalReduceFunction);
+
+const doubledNumbers = numbers.map((num) => {
+  return num * 2;
+}); // [2,4,6,8,10]
+
+const filterdNumbers = numbers.filter((num) => {
+  return num > 2;
+}); // [3,4,5]
+
+const isSomeAboveThree = numbers.some((num) => {
+  return num > 3;
+}); // true
+
+const stockData2 = [
+  { product: "Apple", price: 1.212312312, inStock: true },
+  { product: "Banana", price: 0.84234234, inStock: false },
+  { product: "Orange", price: 1.5555, inStock: true },
+  { product: "Dragonfruit", price: 2.01, inStock: true },
+];
+
+const cleanedData = stockData2.map((stock) => {
+  return {
+    productName: stock.product.toUpperCase(),
+    price: stock.price.toFixed(2),
+    availability: stock.inStock ? "In Stock" : "Out of Stock",
+  };
+});

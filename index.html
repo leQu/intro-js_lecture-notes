@@ -6,7 +6,8 @@
     <title>Intro to JavaScript</title>
 
     <script src="main.js"></script>
-
+    <script src="lecture-5.js"></script>
+    <script src="lecture6.js"></script>
     <script>
       console.log("Hello from inline script!");
     </script>
@@ -14,5 +15,43 @@
   <body>
     <h1>Hello world!</h1>
     <p>This is a simple HTML document.</p>
+    <div id="myDraggable">This is my div element.</div>
+    <button id="clickButton">Click button</button>
+    <button id="mouseButton">Mouse button</button>
+
+    <button id="playAudioButton" class="button-play">Play Audio</button>
+
+    <audio
+      id="myAudio"
+      src="https://audio-previews.elements.envatousercontent.com/files/272118110/preview.mp3?response-content-disposition=attachment%3B+filename%3D%22Z5QVAKY-dog.mp3%22"
+    ></audio>
+
+    <ul id="todoList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <input type="text" name="todoInput" id="todoInput" />
+    <button id="addTodoButton">Add Todo</button>
+    <button id="removeTodoButton">Remove Todo</button>
+
+    <form
+      id="myForm"
+      style="
+        background-color: mistyrose;
+        margin: 50px 30px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      "
+    >
+      <label for="nameInput">Name:</label>
+      <input type="text" id="nameInput" name="nameInput" />
+      <label for="ageInput">Age:</label>
+      <input type="number" id="ageInput" name="ageInput" />
+      <input type="submit" value="Submit" />
+    </form>
   </body>
 </html>
