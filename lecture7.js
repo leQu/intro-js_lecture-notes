@@ -1,7 +1,14 @@
 const z = 10;
 const v = undefined;
 
-function example() {
+function example(name) {
+  if (!name) {
+    console.log("No name provided");
+    return;
+  }
+
+  const nameToUpper = name.toUpperCase();
+
   console.log("example function called");
 }
 
@@ -17,13 +24,13 @@ setTimeout(() => {
   console.log("Three months in milliseconds");
 }, monthToMs(3));
 
-function anotherExample() {
-  console.log("anotherExample function called");
-}
-
 setInterval(function () {
   console.log("anotherAnotherExample function called");
 }, 3000);
+
+function anotherExample() {
+  console.log("anotherExample function called");
+}
 
 const thirdExample = function (
   age,
@@ -38,9 +45,11 @@ const thirdExample = function (
     "is",
     age,
     "years old",
-    school
+    school,
   );
 };
+
+setTimeout(() => {}, 1000);
 
 const fourthExample = (age, name) => {
   console.log(`fourthExample function called, ${name} is ${age} years old`);
@@ -49,8 +58,15 @@ const fourthExample = (age, name) => {
 thirdExample(35, "Alice", "Tech University", "extra1", "extra2");
 fourthExample(30, "Bob");
 
-const isTruthy = 0;
+let isTruthy = 0;
+isTruthy = String(isTruthy);
 
 if (isTruthy === "0") {
   console.log("isTruthy is truthy");
 }
+
+const argumentsExample = {
+  name: "Charlie",
+  age: 28,
+  city: "Stockholm",
+};

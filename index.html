@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intro to JavaScript</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="main.js"></script>
-    <script src="lecture-5.js"></script>
-    <script src="lecture6.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <!-- <script src="lecture-5.js"></script> -->
+    <!-- <script src="lecture6.js"></script> -->
+    <script defer src="lecture8.js"></script>
     <script>
       console.log("Hello from inline script!");
     </script>
@@ -20,6 +22,18 @@
     <button id="mouseButton">Mouse button</button>
 
     <button id="playAudioButton" class="button-play">Play Audio</button>
+
+    <div
+      style="
+        background-color: mistyrose;
+        height: 200px;
+        width: 100%;
+        padding: 30px;
+      "
+    >
+      <input id="search" type="text" />
+      <ul id="searchResult"></ul>
+    </div>
 
     <audio
       id="myAudio"
