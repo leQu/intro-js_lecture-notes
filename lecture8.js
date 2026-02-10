@@ -24,8 +24,13 @@ async function setup() {
   const resultList = document.getElementById("searchResult");
   // const resultList = $("#searchResult");
 
-  const data = await fetch("https://dummyjson.com/products");
-  const response = await data.json();
+  let response;
+  try {
+    const data = await fetch("https://dummyjson.com/products");
+    response = await data.json();
+  } catch (error) {
+    console.log(error);
+  }
   const dataList = response.products; // [{title: "produkt 1"}, {title: "produkt 2"}, ...]
 
   console.log(dataList);
